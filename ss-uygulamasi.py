@@ -8,7 +8,8 @@ kaydedilenler="ss-klasoruuu"
 
 while True:
     ret,frame=cap.read() 
-    frame=cv2.flip(frame,1) 
+    frame=cv2.flip(frame,1)
+    cv2.rectangle(frame,(20,20),(600,450),(0,255,0),5)
     cv2.imshow('Webcam',frame)
     if cv2.waitKey(1) & 0xFF==ord('t'): 
         break
